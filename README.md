@@ -48,20 +48,4 @@ docker-compose down
 
 Show traces for failed tests:
 
-```sh
-bin/show-trace.sh
-```
 
-## Webdriver
-
-An alternative example end-to-end testing setup using the
-[W3C WebDriver](https://www.w3.org/TR/webdriver/) standard can be found at
-[blueimp/wdio](https://github.com/blueimp/wdio/).
-
-## License
-
-Released under the [MIT license](https://opensource.org/licenses/MIT).
-
-## Author
-
-[Sebastian Tschan](https://blueimp.net/)
