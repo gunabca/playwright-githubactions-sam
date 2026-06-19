@@ -22,7 +22,7 @@ jobs:
         echo "### Welcome to github actions :rocket:" >> "$GITHUB_STEP_SUMMARY"
     - name: Install browsers 
       run: | 
-        npx playwright install
+        npx playwright install chromium
     - name: Execute Playwright tests
       run: |
         npx playwright test
