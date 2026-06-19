@@ -16,11 +16,21 @@ jobs:
         node-version: 24
     - name: Install npm packages
       run: npm ci
-    - name: execute playwright tests
-      run: |
-        npx playwright test
     - name: Log messages
       continue-on-error: true
       run: |
         echo "### Welcome to github actions :rocket: " >> $GITHUB_STEP_SUMMARY"
+    - name: Install browsers 
+      run: | 
+        npx playwright install
+    - name: Execute Playwright tests
+      run: |
+        npx playwright test
+    - name: Upload results
+      uses: actions/upload-artifact@v7
+      with:
+        name: Playwright Reports
+        path: playwright-reports/
+
+
             
