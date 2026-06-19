@@ -1,4 +1,17 @@
 name: Github Actions 
 run-name: Github Action learning workflow
 
-on: [push] 
+on: 
+ workflow_dispatch:
+   inputs:
+     app_id:
+       type: string
+jobs:
+  test-job:
+   runs-on : ubuntu-latest
+   steps:
+    - name: 
+      uses: actions/checkoutv4
+      with:
+        node-version: 24 
+            
