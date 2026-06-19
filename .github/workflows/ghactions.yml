@@ -19,7 +19,7 @@ jobs:
     - name: Log messages
       continue-on-error: true
       run: |
-        echo "### Welcome to github actions :rocket: " >> $GITHUB_STEP_SUMMARY"
+        echo "### Welcome to github actions :rocket:" >> "$GITHUB_STEP_SUMMARY"
     - name: Install browsers 
       run: | 
         npx playwright install
