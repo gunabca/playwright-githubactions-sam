@@ -17,5 +17,7 @@ jobs:
     - name: Install npm packages
       run: npm run ci
     - name: execute playwright tests
-      run: npx playwright tests 
+      run: |
+        npx playwright tests 
+        echo "### Welcome to github actions :rocket: " >> $GITHUB_STEP_SUMMARY"
             
