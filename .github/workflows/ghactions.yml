@@ -10,8 +10,12 @@ jobs:
   test-job:
    runs-on : ubuntu-latest
    steps:
-    - name: 
+    - name: checkout the code 
       uses: actions/checkoutv4
       with:
-        node-version: 24 
+        node-version: 24
+    - name: Install npm packages
+      run: npm run ci
+    - name: execute playwright tests
+      run: npx playwright tests 
             
