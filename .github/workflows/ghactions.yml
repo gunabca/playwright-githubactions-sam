@@ -15,9 +15,12 @@ jobs:
       with:
         node-version: 24
     - name: Install npm packages
-      run: npm run ci
+      run: npm ci
     - name: execute playwright tests
       run: |
         npx playwright tests 
+    - name: Log messages
+      continue-on-error: true
+      run: |
         echo "### Welcome to github actions :rocket: " >> $GITHUB_STEP_SUMMARY"
             
